@@ -1,12 +1,12 @@
 CXX = clang++
-CXXFLAGS = -std=c++1z -Wall -Wbinding-in-condition
+CXXFLAGS = -std=c++17 -Wall
 
 SOURCES=$(wildcard *.cpp)
-BINARIES=$(patsubst %.cpp,bin/%,$(SOURCES))
+BINARIES=$(patsubst %.cpp,./%,$(SOURCES))
 
 default: $(BINARIES)
 
-bin/%: %.cpp
+./%: %.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
 clean:
