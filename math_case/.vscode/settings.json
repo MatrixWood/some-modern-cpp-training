@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "complex": "cpp",
+    "ratio": "cpp",
+    "valarray": "cpp"
+  }
+}
